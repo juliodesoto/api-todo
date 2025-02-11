@@ -21,11 +21,11 @@ servidor.delete("/tareas/borrar/:id", (peticion,respuesta) => {
 });
 
 servidor.PUT("/tareas/editar/estado/:id", (peticion,respuesta) => {
-    respuesta.send("tareas/editar/estado/:id");
+    respuesta.send("PUT/tareas/editar/estado/:id");
 });
 
 servidor.PUT("/tareas/editar/texto/:id", (peticion,respuesta) => {
-    respuesta.send("tareas/editar/texto/:id");
+    respuesta.send("PUT/tareas/editar/texto/:id");
 });
 
 
