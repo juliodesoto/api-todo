@@ -20,17 +20,18 @@ servidor.delete("/tareas/borrar/:id", (peticion,respuesta) => {
     respuesta.send("DELETE/tareas/borrar/:id");
 });
 
-servidor.PUT("/tareas/editar/estado/:id", (peticion,respuesta) => {
-    respuesta.send("PUT/tareas/editar/estado/:id");
-});
-
-servidor.PUT("/tareas/editar/texto/:id", (peticion,respuesta) => {
+servidor.put("/tareas/editar/texto/:id", (peticion,respuesta) => {
     respuesta.send("PUT/tareas/editar/texto/:id");
 });
 
+servidor.put("/tareas/editar/estado/:id", (peticion,respuesta) => {
+    respuesta.send("PUT/tareas/editar/estado/:id");
+});
 
-
-
+servidor.use((peticion,respuesta) => {
+    respuesta.status(404);
+    respuesta.json({error : "recurso no encontrado"});
+});
 
 
 servidor.listen(process.env.PORT);
