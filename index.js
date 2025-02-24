@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import {leerTarea,crearTarea,borrarTarea,editarEstado,editarTarea} from "./db.js"
 const servidor = express();
 
 if(process.env.PRUEBAS){
