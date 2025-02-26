@@ -1,3 +1,5 @@
+//Estas son las funciones que interactuan con la base de datos
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -17,7 +19,7 @@ export function leerTareas(){
     return new Promise((ok,ko) => {
         const conexion = conectar();
 
-        conexion`SELECT * FROM tareas`
+        conexion`SELECT * FROM tareas ORDER BY id`
         .then( tareas => {
             conexion.end();
             ok (tareas);
