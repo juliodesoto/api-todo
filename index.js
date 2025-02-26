@@ -111,6 +111,8 @@ servidor.put("/tareas/editar/texto/:id([0-9]+)", async (peticion,respuesta,sigui
         };
 
     }
+
+    siguiente(true);
         
 });
 

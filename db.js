@@ -103,7 +103,7 @@ export function editarTarea(id,tarea){
     return new Promise((ok,ko) => {
         const conexion = conectar();
 
-        conexion`UPDATE tareas SET tarea = ${tarea }WHERE id = ${id}`
+        conexion`UPDATE tareas SET tarea = ${tarea} WHERE id = ${id}`
         .then( ({count}) => {
             conexion.end();
             ok (count);
